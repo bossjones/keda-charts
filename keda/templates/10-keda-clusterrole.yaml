@@ -17,6 +17,7 @@ rules:
   verbs:
   - '*'
 - apiGroups:
+  # "" indicates the core API group
   - ""
   resources:
   - external
@@ -33,6 +34,8 @@ rules:
   - '*'
   verbs:
   - get
+  - list
+  - watch
 - apiGroups:
   - '*'
   resources:

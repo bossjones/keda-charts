@@ -16,6 +16,7 @@ image:
 crds:
   install: true
 
+# Defines Kubernetes namespaces to watch to scale their workloads. Default watches all namespaces
 watchNamespace: ""
 
 imagePullSecrets: []
@@ -77,7 +78,7 @@ logging:
     ## Logging level for KEDA Operator
     # allowed values: 'debug', 'info', 'error', or an integer value greater than 0, specified as string
     # default value: info
-    level: info
+    level: debug
     # allowed valuesL 'json' or 'console'
     # default value: console
     format: console
@@ -197,5 +198,3 @@ prometheus:
         #   expr: sum by ( scaledObject , scaler) (rate(keda_metrics_adapter_scaler_errors[2m]))  > 0
         #   for: 2m
         #   labels:
-
-
